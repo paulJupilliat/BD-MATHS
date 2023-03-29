@@ -1,5 +1,6 @@
--- Active: 1678109077661@@127.0.0.1@3306@SAE_BD
-
+-- Active: 1675864418959@@localhost@3306
+create DATABASE if not EXISTS compagnie_aeriennes;
+use compagnie_aeriennes;
 drop table VOLS;
 
 drop table TERMINAUX;
