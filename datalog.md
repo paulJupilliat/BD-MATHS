@@ -212,3 +212,7 @@ ville_impair(Ville1, Ville2) :-
 % Requête pour obtenir la liste de toutes les villes connectées avec un nombre impair de connexions
 ?- ville_impair(Depart, Arrivee).
 ```
+ville_directe(Ville1, Ville2) :- vol_direct(Ville1, Ville2, _, _).
+ville_escale(Ville1, Ville2) :- vol_connecte(Ville1, Ville2, _, _).
+ville_impair(Ville1, Ville2) :- vol_direct(Ville1, Ville2, _, _).
+ville_impair(Ville1, Ville2) :- vol_direct(Ville1, Ville3, _, _), ville_impair(Ville3, Ville2), Ville1 != Ville2.
