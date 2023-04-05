@@ -437,11 +437,6 @@ VALUES (
                             '1 rue de la Paix',
                             'Paris',
                             'France'
-                        ),
-                        Adresse(
-                            '10 Downing Street',
-                            'Londres',
-                            'Royaume-Uni'
                         )
                     )
                 )
@@ -458,11 +453,6 @@ VALUES (
                             '95700 Roissy-en-France',
                             'Roissy',
                             'France'
-                        ),
-                        Adresse(
-                            'Rue du Luxembourg',
-                            'Bruxelles',
-                            'Belgique'
                         )
                     ),
                     'Terminal 2E'
@@ -479,11 +469,6 @@ VALUES (
                             'Longford, Hounslow TW6',
                             'Londres',
                             'Royaume-Uni'
-                        ),
-                        Adresse(
-                            '95700 Roissy-en-France',
-                            'Roissy',
-                            'France'
                         )
                     ),
                     'Terminal 5'
@@ -502,30 +487,12 @@ VALUES (
                                     '10 Downing Street',
                                     'Londres',
                                     'Royaume-Uni'
-                                ),
-                                Adresse(
-                                    '1 rue de la Paix',
-                                    'Paris',
-                                    'France'
                                 )
                             )
                         )
                     )
                 )
-            ),
-            AdresseArray(
-                Adresse(
-                    '10 Downing Street',
-                    'Londres',
-                    'Royaume-Uni'
-                ),
-                Adresse(
-                    '1 rue de la Paix',
-                    'Paris',
-                    'France'
-                )
-            ),
-            VolArray()
+            )
         )
     );
 
@@ -544,11 +511,6 @@ VALUES (
                             '10 Downing Street',
                             'Londres',
                             'Royaume-Uni'
-                        ),
-                        Adresse(
-                            '1 rue de la Paix',
-                            'Paris',
-                            'France'
                         )
                     )
                 )
@@ -565,11 +527,6 @@ VALUES (
                             'Queens, New York',
                             'New York',
                             'USA'
-                        ),
-                        Adresse(
-                            'Hounslow, Middlesex',
-                            'Londres',
-                            'Royaume-Uni'
                         )
                     ),
                     'Terminal 7'
@@ -586,11 +543,6 @@ VALUES (
                             '95700 Roissy-en-France',
                             'Roissy',
                             'France'
-                        ),
-                        Adresse(
-                            'JFK Airport, Queens',
-                            'New York',
-                            'USA'
                         )
                     ),
                     'Terminal 2D'
@@ -602,11 +554,6 @@ VALUES (
                     'Hounslow, Middlesex',
                     'Londres',
                     'Royaume-Uni'
-                ),
-                Adresse(
-                    '1 rue de la Paix',
-                    'Paris',
-                    'France'
                 )
             ),
             VolArray(
@@ -621,11 +568,6 @@ VALUES (
                                     '1 rue de la Paix',
                                     'Paris',
                                     'France'
-                                ),
-                                Adresse(
-                                    '10 Downing Street',
-                                    'Londres',
-                                    'Royaume-Uni'
                                 )
                             )
                         )
@@ -642,11 +584,6 @@ VALUES (
                                     '95700 Roissy-en-France',
                                     'Roissy',
                                     'France'
-                                ),
-                                Adresse(
-                                    'Rue du Luxembourg',
-                                    'Bruxelles',
-                                    'Belgique'
                                 )
                             ),
                             'Terminal 2E'
@@ -663,11 +600,6 @@ VALUES (
                                     'Longford, Hounslow TW6',
                                     'Londres',
                                     'Royaume-Uni'
-                                ),
-                                Adresse(
-                                    '95700 Roissy-en-France',
-                                    'Roissy',
-                                    'France'
                                 )
                             ),
                             'Terminal 5'
@@ -686,34 +618,80 @@ VALUES (
                                             '10 Downing Street',
                                             'Londres',
                                             'Royaume-Uni'
-                                        ),
-                                        Adresse(
-                                            '1 rue de la Paix',
-                                            'Paris',
-                                            'France'
+                                        )
+                                    )
+                                ),
+                                ReservationArray(
+                                    Reservation(
+                                        1,
+                                        TO_DATE('2023/04/12', 'YYYY/MM/DD'),
+                                        Vol(
+                                            1,
+                                            CompagnieAerienneArray(
+                                                CompagnieAerienne(
+                                                    1,
+                                                    'Air France',
+                                                    AdresseArray(
+                                                        Adresse(
+                                                            '1 rue de la Paix',
+                                                            'Paris',
+                                                            'France'
+                                                        )
+                                                    )
+                                                )
+                                            ),
+                                            123,
+                                            TO_DATE('2023/04/15', 'YYYY/MM/DD'),
+                                            TO_DATE('08:00:00', 'HH24:MI:SS'),
+                                            AeroportArray(
+                                                Aeroport(
+                                                    1,
+                                                    'Charles de Gaulle',
+                                                    AdresseArray(
+                                                        Adresse(
+                                                            '95700 Roissy-en-France',
+                                                            'Roissy',
+                                                            'France'
+                                                        )
+                                                    ),
+                                                    'Terminal 2E'
+                                                )
+                                            ),
+                                            TO_DATE('2023/04/15', 'YYYY/MM/DD'),
+                                            TO_DATE('11:00:00', 'HH24:MI:SS'),
+                                            AeroportArray(
+                                                Aeroport(
+                                                    2,
+                                                    'Heathrow',
+                                                    AdresseArray(
+                                                        Adresse(
+                                                            'Longford, Hounslow TW6',
+                                                            'Londres',
+                                                            'Royaume-Uni'
+                                                        )
+                                                    ),
+                                                    'Terminal 5'
+                                                )
+                                            ),
+                                            ReservationArray(),
+                                            AdresseArray(
+                                                Adresse(
+                                                    '10 Downing Street',
+                                                    'Londres',
+                                                    'Royaume-Uni'
+                                                )
+                                            ),
                                         )
                                     )
                                 )
                             )
                         )
-                    ),
-                    AdresseArray(
-                        Adresse(
-                            '10 Downing Street',
-                            'Londres',
-                            'Royaume-Uni'
-                        ),
-                        Adresse(
-                            '1 rue de la Paix',
-                            'Paris',
-                            'France'
-                        )
-                    ),
-                    VolArray()
+                    )
                 )
             )
         )
     );
+
 
 --c
 
@@ -1116,5 +1094,171 @@ VALUES (
                 IndiceQualite('Confort', 4, 0.2),
                 IndiceQualite('Service', 5, 0.3)
             )
+        )
+    );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    INSERT INTO AdresseTable
+VALUES (
+        Adresse(
+            '10 Downing Street',
+            'Londres',
+            'Royaume-Uni'
+        )
+    );
+
+INSERT INTO AeroportTable
+VALUES (
+        Aeroport(
+            1,
+            'Charles de Gaulle',
+            AdresseArray(
+                Adresse(
+                    '95700 Roissy-en-France',
+                    'Roissy',
+                    'France'
+                )
+            ),
+            'Terminal 2E'
+        )
+    );
+
+INSERT INTO PassagerTable
+VALUES (
+        Passager(
+            'Doe',
+            'John',
+            AdresseArray(
+                Adresse(
+                    '10 Downing Street',
+                    'Londres',
+                    'Royaume-Uni'
+                )
+            )
+        )
+    );
+
+INSERT INTO
+    CompagnieAerienneTable
+VALUES (
+        CompagnieAerienne(
+            1,
+            'Air France',
+            AdresseArray(
+                Adresse(
+                    '1 rue de la Paix',
+                    'Paris',
+                    'France'
+                )
+            )
+        )
+    );
+
+INSERT INTO ReservationTable
+VALUES (
+        Reservation(
+            1,
+            TO_DATE('2023/04/12', 'YYYY/MM/DD'),
+            PassagerArray(
+                Passager(
+                    'Doe',
+                    'John',
+                    AdresseArray(
+                        Adresse(
+                            '10 Downing Street',
+                            'Londres',
+                            'Royaume-Uni'
+                        )
+                    )
+                )
+            )
+        )
+    );
+
+INSERT INTO VolTable
+VALUES (
+        Vol(
+            1,
+            CompagnieAerienneArray(
+                CompagnieAerienne(
+                    1,
+                    'Air France',
+                    AdresseArray(
+                        Adresse(
+                            '1 rue de la Paix',
+                            'Paris',
+                            'France'
+                        )
+                    )
+                )
+            ),
+            123,
+            TO_DATE('2023/04/15', 'YYYY/MM/DD'),
+            TO_DATE('08:00:00', 'HH24:MI:SS'),
+            AeroportArray(
+                Aeroport(
+                    1,
+                    'Charles de Gaulle',
+                    AdresseArray(
+                        Adresse(
+                            '95700 Roissy-en-France',
+                            'Roissy',
+                            'France'
+                        )
+                    ),
+                    'Terminal 2E'
+                )
+            ),
+            TO_DATE('2023/04/15', 'YYYY/MM/DD'),
+            TO_DATE('11:00:00', 'HH24:MI:SS'),
+            AeroportArray(
+                Aeroport(
+                    2,
+                    'Heathrow',
+                    AdresseArray(
+                        Adresse(
+                            'Longford, Hounslow TW6',
+                            'Londres',
+                            'Royaume-Uni'
+                        )
+                    ),
+                    'Terminal 5'
+                )
+            ),
+            ReservationArray(),
         )
     );
